@@ -6,10 +6,10 @@ var myGame = function(){
   this.heldCards = [];
   this.allCards  = this.mapCards();
   this.cash      = 1000;
-  this.setUp();
+  this.setup();
 }
 
-myGame.prototype.setUp = function(){
+myGame.prototype.setup = function(){
   $('#dealNext').hide()
   $('#cashAmount').html(this.cash)
   $('#playHand').on("click", this.playHand.bind(this))
@@ -61,7 +61,7 @@ myGame.prototype.dealNextHand = function(){
     $('#dealNext').hide()
     $('#betAmount').hide()
     setTimeout(function(){ 
-      $('#cards').html("<h1 id='moneyOut'>You ran out of moneyyss!</h1>")
+      $('#cards').html("<h1 id='moneyOut'>You ran out of candy!</h1>")
     },3000);
   }
 }
